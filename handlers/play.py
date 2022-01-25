@@ -201,15 +201,15 @@ async def play(_, message: Message):
                 dur += int(dur_arr[i]) * secmul
                 secmul *= 60
 
-       keyboard = InlineKeyboardMarkup(
-        [
+            keyboard = InlineKeyboardMarkup(
             [
-                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
-            ],
-            [
-                InlineKeyboardButton(
-                    "🚑 Support", url=f"https://t.me/UNIQUE_SUPPORT"
+                [
+                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+               ],
+               [
+                    InlineKeyboardButton(
+                         "🚑 Support", url=f"https://t.me/UNIQUE_SUPPORT"
                 ),
                 InlineKeyboardButton("Updates 📢", url=f"https://t.me/THE_BLAZE_NETWORK"),
             ],
