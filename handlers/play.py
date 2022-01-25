@@ -159,29 +159,19 @@ async def play(_, message: Message):
         views = "Locally added"
 
         keyboard = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton(
-                            text="📢 Powered by ❔",
-                            url=f"https://t.me/Log_afk")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="🚑 Support",
-                            url=f"https://t.me/Blaze_Support"),
-                            
-                    InlineKeyboardButton(
-                            text="Update 📢",
-                            url=f"https://t.me/The_Blaze_Network")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="📨 Chitchat 📡",
-                            url=f"https://t.me/UNIQUE_SOCIETY")
-                   
-                ]
-            ]
-        )
+                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+            ],
+            [
+                InlineKeyboardButton(
+                    "🚑 Support", url=f"https://t.me/UNIQUE_SUPPORT"
+                ),
+                InlineKeyboardButton("Updates 📢", url=f"https://t.me/THE_BLAZE_NETWORK"),
+            ],
+        ]
+    )
 
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -211,31 +201,22 @@ async def play(_, message: Message):
                 dur += int(dur_arr[i]) * secmul
                 secmul *= 60
 
-            keyboard = InlineKeyboardMarkup(
+       keyboard = InlineKeyboardMarkup(
+        [
             [
-                [
-                     
-InlineKeyboardButton(
-                            text="📢 Powered by ❔",
-                            url=f"https://t.me/Log_afk")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="🚑 Support",
-                            url=f"https://t.me/Blaze_Support"),
-                            
-                    InlineKeyboardButton(
-                            text="Update 📢",
-                            url=f"https://t.me/The_Blaze_Network")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="📨 Chitchat 📡",
-                            url=f"https://t.me/UNIQUE_SOCIETY")
-                   
-                ]
-            ]
-        )
+                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+            ],
+            [
+                InlineKeyboardButton(
+                    "🚑 Support", url=f"https://t.me/UNIQUE_SUPPORT"
+                ),
+                InlineKeyboardButton("Updates 📢", url=f"https://t.me/THE_BLAZE_NETWORK"),
+            ],
+        ]
+    )
+            
+
         except Exception as e:
             title = "NaN"
             thumb_name = "https://telegra.ph/file/22359c7480327483c353a.jpg"
@@ -244,27 +225,17 @@ InlineKeyboardButton(
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                            text="📢 Powered by ❔",
-                            url=f"https://t.me/Log_afk")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="🚑 Support",
-                            url=f"https://t.me/Blaze_Support"),
-                            
-                    InlineKeyboardButton(
-                            text="Update 📢",
-                            url=f"https://t.me/The_Blaze_Network")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="📨 Chitchat 📡",
-                            url=f"https://t.me/UNIQUE_SOCIETY")
-                   
-                ]
-            ]
-        )
+                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+            ],
+            [
+                InlineKeyboardButton(
+                    "🚑 Support", url=f"https://t.me/UNIQUE_SUPPORT"
+                ),
+                InlineKeyboardButton("Updates 📢", url=f"https://t.me/THE_BLAZE_NETWORK"),
+            ],
+        ]
+    )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
@@ -312,27 +283,17 @@ InlineKeyboardButton(
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                            text="📢 Powered by ❔",
-                            url=f"https://t.me/Log_afk")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="🚑 Support",
-                            url=f"https://t.me/Blaze_Support"),
-                            
-                    InlineKeyboardButton(
-                            text="Update 📢",
-                            url=f"https://t.me/The_Blaze_Network")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="📨 Chitchat 📡",
-                            url=f"https://t.me/UNIQUE_SOCIETY")
-                   
-                ]
-            ]
-        )
+                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+            ],
+            [
+                InlineKeyboardButton(
+                    "🚑 Support", url=f"https://t.me/UNIQUE_SUPPORT"
+                ),
+                InlineKeyboardButton("Updates 📢", url=f"https://t.me/THE_BLAZE_NETWORK"),
+            ],
+        ]
+    )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
